@@ -700,3 +700,23 @@ p {
     opacity: 1;
   }
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  .chat-box {
+    right: 15px;
+    bottom: 100px;
+    width: 90%;
+    height: 60vh;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .chat-box {
+    right: 5%;
+    width: 90%;
+    height: 70vh;
+    bottom: 90px;
+  }
+}
