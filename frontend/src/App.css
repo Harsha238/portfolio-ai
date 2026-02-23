@@ -1,0 +1,702 @@
+/* ================= GLOBAL ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(circle at top left, #1e293b, #0f172a);
+  color: #f8fafc;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+  color: #38bdf8;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.nav-links a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* ================= HERO ================= */
+/* ================= HERO UPGRADE ================= */
+/* HERO BUTTON CONTAINER */
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ICONS CONTAINER */
+.hero-icons {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
+  text-align: center;
+  background: radial-gradient(circle at top left, #1e293b, #0f172a);
+  padding-top: 80px; /* prevents navbar overlap */
+}
+
+/* Make sure hero content stacks properly */
+.hero-container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title */
+/* NAME */
+.hero-title {
+  font-size: 64px;     /* bigger */
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ROLE LINE */
+.hero-subtitle {
+  font-size: 18px;     /* slightly smaller */
+  color: #94a3b8;
+  margin-bottom: 18px;
+}
+
+/* DESCRIPTION */
+.hero-description {
+  font-size: 16px;     /* slightly smaller */
+  color: #cbd5e1;
+  max-width: 650px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.hero-buttons {
+  margin-bottom: 20px;
+}
+/* BUTTONS */
+
+.btn-primary {
+  padding: 14px 32px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #38bdf8, #22d3ee);
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 25px rgba(34,211,238,0.7);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: rgba(56,189,248,0.1);
+  box-shadow: 0 0 20px rgba(56,189,248,0.5);
+}
+
+/* SOCIAL ICONS */
+
+.hero-icons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 28px;
+}
+
+.hero-icons a {
+  color: #94a3b8;
+  transition: 0.3s;
+}
+
+.hero-icons a:hover {
+  color: #38bdf8;
+  transform: translateY(-3px);
+}
+/* ================= SECTIONS ================= */
+
+.section {
+  padding: 120px 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  color: #38bdf8;
+}
+
+p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+/* ================= ABOUT ================= */
+
+/* ================= ABOUT SECTION UPGRADE ================= */
+
+.about-section {
+  padding: 140px 0;
+  background: radial-gradient(circle at top right, #1e293b, #0f172a);
+}
+
+.about-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.about-left {
+  flex: 1;
+}
+
+.about-left h2 {
+  font-size: 42px;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-left p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.highlight {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* RIGHT SIDE */
+
+.about-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.about-card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(56,189,248,0.3);
+}
+
+.about-card h3 {
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.about-card p {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* ================= TECH STACK ================= */
+
+.tech-section {
+  padding: 120px 0;
+}
+
+.tech-title {
+  text-align: center;
+  font-size: 38px;
+}
+
+.tech-subtitle {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #94a3b8;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.tech-card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(56,189,248,0.3);
+}
+
+.tech-tags span {
+  display: inline-block;
+  margin: 8px 8px 0 0;
+  padding: 7px 14px;
+  border-radius: 18px;
+  background: rgba(56,189,248,0.15);
+  color: #38bdf8;
+  font-size: 13px;
+}
+
+/* ================= PROJECTS & INTERNSHIPS ================= */
+
+/* ===============================
+   PROJECT LAYOUT
+================================= */
+
+.project-layout {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.project-layout.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ===============================
+   PROJECT IMAGE
+================================= */
+
+.project-image {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+}
+
+.project-image img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect */
+.project-image:hover {
+  transform: translateY(-8px);
+}
+
+.project-image:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.35);
+}
+
+/* ===============================
+   PROJECT INFO
+================================= */
+
+.project-info {
+  flex: 1;
+}
+
+.project-info ul {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-left: 18px;
+}
+
+.project-info li {
+  margin-bottom: 8px;
+  color: #94a3b8;
+}
+
+/* ===============================
+   TECH STACK TAGS
+================================= */
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.skills-grid span {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ===============================
+   SOURCE BUTTON SPACING
+================================= */
+
+.project-info .source-btn {
+  margin-top: 35px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+/* ================= SOURCE BUTTON ================= */
+
+.source-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.source-btn:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 0 20px rgba(56,189,248,0.5);
+}
+
+/* ================= CONTACT ================= */
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-section .container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-section p {
+  color: #cbd5e1;
+  margin-bottom: 40px;
+}
+
+/* Contact Card */
+.contact-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.contact-box p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #e2e8f0;
+}
+
+/* Resume Button */
+.contact-box .btn-primary {
+  margin-top: 25px;
+  display: inline-block;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #94a3b8;
+}
+
+
+/* ===== AI FLOATING BUTTON ===== */
+.chat-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  color: white;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 9999;   /* ensures it stays above everything */
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+  transition: 0.3s ease;
+}
+
+.chat-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ================= CHAT BOX ================= */
+
+.chat-box {
+  position: fixed;
+  bottom: 110px;
+  right: 25px;
+  width: 380px;
+  height: 500px;
+
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+
+  animation: slideUp 0.35s ease;
+}
+
+/* ================= HEADER ================= */
+
+.chat-header {
+  padding: 14px 16px;
+  background: rgba(30,41,59,0.6);
+  backdrop-filter:blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.chat-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 16px;
+  color: #94a3b8;
+}
+
+/* ================= MODE BADGE ================= */
+
+.mode-badge {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.mode-badge.normal {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.mode-badge.recruiter {
+  background: #f59e0b;
+  color: #0f172a;
+}
+
+/* ================= MODE SWITCH ================= */
+
+.mode-switch {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px;
+  background: #0f172a;
+}
+
+.mode-switch button {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  background: #334155;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.mode-switch button.active {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.mode-switch button.recruiter-btn.active {
+  background: #f59e0b;
+  color: #0f172a;
+}
+
+/* ================= MESSAGES ================= */
+
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  color: white;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+}
+
+.user {
+  text-align: right;
+  color: #38bdf8;
+}
+
+.ai {
+  text-align: left;
+  color: #a78bfa;
+}
+
+/* Recruiter mode message color */
+.recruiter-msg.ai {
+  color: #fbbf24;
+}
+
+/* ================= INPUT ================= */
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: white;
+}
+
+.chat-input button {
+  padding: 12px 16px;
+  background: #38bdf8;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chat-input button:hover {
+  background: #0ea5e9;
+}
+
+/* ================= TYPING ANIMATION ================= */
+
+.typing span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 3px;
+  background: #38bdf8;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite both;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(-6px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.5; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
