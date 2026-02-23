@@ -5,7 +5,7 @@ import candidateImg from "./assets/candidate-system.png";
 import pantechImg from "./assets/pantech-internship.png";
 import cloudImg from "./assets/cloud-security.png";
 import { useRef, useEffect } from "react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa6";
+
 
 
 function App() {
